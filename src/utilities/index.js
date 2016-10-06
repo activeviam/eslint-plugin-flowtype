@@ -1,8 +1,17 @@
 'create index';
 
-export getParameterName from './getParameterName.js';
-export isFlowFile from './isFlowFile.js';
-export isFlowFileAnnotation from './isFlowFileAnnotation.js';
-export iterateFunctionNodes from './iterateFunctionNodes.js';
-export * as spacingFixers from './spacingFixers';
-export quoteName from './quoteName';
+import getParameterName from './getParameterName.js';
+import isFlowFile from './isFlowFile.js';
+import isFlowFileAnnotation from './isFlowFileAnnotation.js';
+import iterateFunctionNodes from './iterateFunctionNodes.js';
+import * as spacingFixers from './spacingFixers';
+import quoteName from './quoteName';
+
+export default {
+  getParameterName,
+  isFlowFile,
+  isFlowFileAnnotation,
+  iterateFunctionNodes,
+  quoteName,
+  spacingFixers
+};
