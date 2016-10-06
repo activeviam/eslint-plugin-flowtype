@@ -27,6 +27,7 @@
   "scripts": {
     "lint": "eslint ./src ./tests",
     "test": "mocha --compilers js:babel-register ./tests/rules/index.js",
+    "test-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- ./tests/rules/index.js --compilers js:babel-register --report lcovonly",
     "build": "babel ./src --out-dir ./dist --copy-files",
     "documentation-add-assertions": "babel-node ./bin/readmeAssertions",
     "documentation": "gitdown ./.README/README.md --output-file ./README.md; npm run documentation-add-assertions",
@@ -49,6 +50,7 @@
     "eslint-config-canonical": "1.8.1",
     "gitdown": "^2.5.0",
     "husky": "^0.11.7",
+    "istanbul": "^1.1.0-alpha.1",
     "jsonlint": "^1.6.2",
     "mocha": "^3.0.2",
     "standard-version": "^2.4.0",
